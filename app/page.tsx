@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type Post = {
+  id: Number;
   imageUrl: string;
   like: Number;
   comments: Number;
@@ -44,7 +45,7 @@ export default function Home() {
         <div className="mt-10">
           <div>top posts</div>
           <div className="grid grid-cols-3 gap-3">
-            {posts.map(post => <Post {...post} />)}
+            {posts.map(post => <Post key={`${post.id}`} {...post} />)}
           </div>
         </div>
       </div>

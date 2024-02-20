@@ -3,7 +3,8 @@ export async function GET(request: Request) {
         return {
             like: Math.floor(Math.random() * 100),
             comments: Math.floor(Math.random() * 100),
-            imageUrl: `https://picsum.photos/id/${Math.floor(Math.random() * 100)}/300/300`
+            imageUrl: `https://picsum.photos/id/${Math.floor(Math.random() * 100)}/300/300`,
+            id: Math.floor(Math.random() * 10000)
         }
     })
     
